@@ -1,4 +1,4 @@
-package br.com.mello.Literalura;
+package br.com.mello.Literalura.service;
 
 import java.io.IOException;
 import java.net.URI;
@@ -17,12 +17,8 @@ public class ConsumoAPI {
         try {
             response = client
                     .send(request, HttpResponse.BodyHandlers.ofString());
-//            System.out.println("Sucesso!");
-//            System.out.println(response.statusCode());
-//            System.out.println(response.headers());
         } catch (InterruptedException | IOException e) {
         System.out.println("Erro na requisição:");
-//        e.printStackTrace();
         throw new RuntimeException("Falha na requisição à API", e);
     }
 
